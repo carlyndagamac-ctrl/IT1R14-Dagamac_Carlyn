@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+// Function to check and describe the number
+void analyzeNumber(int number) {
+    // Check if the number is positive, negative, or zero
+    if (number > 0) {
+        printf("The number is POSITIVE.\n");
+    } else if (number < 0) {
+        printf("The number is NEGATIVE.\n");
+    } else {
+        printf("The number is ZERO.\n");
+    }
+
+    // Check if the number is even or odd
+    if (number % 2 == 0) {
+        printf("The number is EVEN.\n");
+    } else {
+        printf("The number is ODD.\n");
+    }
+}
+
+int main() {
+    int number;
+
+    printf("================================\n");
+    printf("       NUMBER ANALYZER\n");
+    printf("================================\n");
+
+    // Ask the user to enter five numbers
+    for (int i = 1; i <= 5; i++) {
+        printf("\nEnter number %d: ", i);
+        scanf("%d", &number);
+
+        // Analyze the number using the function
+        analyzeNumber(number);
+    }
+
+    printf("\nProgram finished.\n");
+
+    return 0;
+}
