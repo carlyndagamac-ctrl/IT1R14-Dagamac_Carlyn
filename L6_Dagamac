@@ -45,42 +45,41 @@ int main()
         printf("\nEnter choice [1-5]: ");
         scanf("%d", &choice);
 
-        switch(choice)
+        if(choice == 1)
         {
-            case 1:
-                result = add(num1, num2);
-                printf("\n%.0f + %.0f = %.0f\n", num1, num2, result);
-                break;
-
-            case 2:
-                result = subtract(num1, num2);
-                printf("\n%.0f - %.0f = %.0f\n", num1, num2, result);
-                break;
-
-            case 3:
-                result = multiply(num1, num2);
-                printf("\n%.0f * %.0f = %.0f\n", num1, num2, result);
-                break;
-
-            case 4:
-                if(num2 == 0)
-                {
-                    printf("\nCannot divide by zero.\n");
-                }
-                else
-                {
-                    result = divide(num1, num2);
-                    printf("\n%.0f / %.0f = %.2f\n",
-                           num1, num2, result);
-                }
-                break;
-
-            case 5:
-                printf("\nExit Program\n");
-                break;
-
-            default:
-                printf("\nInvalid choice. Please try again.\n");
+            result = add(num1, num2);
+            printf("\n%.0f + %.0f = %.0f\n", num1, num2, result);
+        }
+        else if(choice == 2)
+        {
+            result = subtract(num1, num2);
+            printf("\n%.0f - %.0f = %.0f\n", num1, num2, result);
+        }
+        else if(choice == 3)
+        {
+            result = multiply(num1, num2);
+            printf("\n%.0f * %.0f = %.0f\n", num1, num2, result);
+        }
+        else if(choice == 4)
+        {
+            if(num2 == 0)
+            {
+                printf("\nCannot divide by zero.\n");
+            }
+            else
+            {
+                result = divide(num1, num2);
+                printf("\n%.0f / %.0f = %.2f\n",
+                       num1, num2, result);
+            }
+        }
+        else if(choice == 5)
+        {
+            printf("\nExit Program\n");
+        }
+        else
+        {
+            printf("\nInvalid choice. Please try again.\n");
         }
 
     } while(choice != 5);
